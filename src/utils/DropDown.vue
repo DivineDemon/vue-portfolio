@@ -4,7 +4,7 @@
       <MenuButton
         class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-100"
       >
-        <VueIcons :name="'menu'" />
+        <font-awesome-icon icon="fa-solid fa-bars" />
       </MenuButton>
     </div>
 
@@ -38,12 +38,10 @@
 
 <script>
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
-import VueIcons from "@/utils/VueIcons.vue";
 
 export default {
   name: "DropDown",
   components: {
-    VueIcons,
     Menu,
     MenuButton,
     MenuItem,
