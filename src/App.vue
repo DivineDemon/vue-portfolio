@@ -1,9 +1,14 @@
 <template>
-  <h1 class="text-3xl font-bold">Hi !!!</h1>
+  <NavBar />
 </template>
 
 <script>
+import NavBar from "./components/NavBar.vue";
+
 export default {
   name: "App",
+  components: {
+    NavBar,
+  },
 };
 </script>
