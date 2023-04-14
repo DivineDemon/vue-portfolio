@@ -12,10 +12,15 @@
         <li class="hover:border-b-2 hover:border-black">Projects</li>
         <li class="hover:border-b-2 hover:border-black">Contact</li>
       </ul>
-      <!-- Download Resume -->
-      <button class="rounded-lg px-3 py-1 hover:border-2 hover:border-black">
-        Download Resume
-      </button>
+      <!-- Nav Controls -->
+      <div class="flex flex-row items-center justify-center space-x-10">
+        <!-- Dark Mode Toggle -->
+        <DarkMode />
+        <!-- Download Resume -->
+        <button class="rounded-lg px-3 py-1 hover:border-2 hover:border-black">
+          Download Resume
+        </button>
+      </div>
     </div>
 
     <!-- Responsive Navbar -->
@@ -25,10 +30,14 @@
 
 <script>
 import DropDown from "@/utils/DropDown.vue";
+import DarkMode from "@/utils/DarkMode.vue";
 
 export default {
   name: "NavBar",
-  components: { DropDown },
+  components: {
+    DropDown,
+    DarkMode,
+  },
   data() {
     return {
       dropDown: [
