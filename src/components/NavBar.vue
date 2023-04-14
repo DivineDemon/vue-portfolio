@@ -15,25 +15,25 @@
       <!-- Nav Items -->
       <ul class="flex flex-row items-center justify-center space-x-10">
         <li
-          class="hover:border-b-2 hover:border-black"
+          class="cursor-pointer hover:border-b-2 hover:border-black"
           :class="{ 'hover:border-white': dark }"
         >
           Services
         </li>
         <li
-          class="hover:border-b-2 hover:border-black"
+          class="cursor-pointer hover:border-b-2 hover:border-black"
           :class="{ 'hover:border-white': dark }"
         >
           Experience
         </li>
         <li
-          class="hover:border-b-2 hover:border-black"
+          class="cursor-pointer hover:border-b-2 hover:border-black"
           :class="{ 'hover:border-white': dark }"
         >
           Projects
         </li>
         <li
-          class="hover:border-b-2 hover:border-black"
+          class="cursor-pointer hover:border-b-2 hover:border-black"
           :class="{ 'hover:border-white': dark }"
         >
           Contact

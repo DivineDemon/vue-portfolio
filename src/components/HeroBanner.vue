@@ -33,10 +33,19 @@
           <span>Contact Me</span>
           <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
         </button>
-        <font-awesome-icon icon="fa-brands fa-facebook" />
-        <font-awesome-icon icon="fa-brands fa-github" />
-        <font-awesome-icon icon="fa-brands fa-stack-overflow" />
-        <font-awesome-icon icon="fa-brands fa-linkedin" />
+        <font-awesome-icon
+          icon="fa-brands fa-facebook"
+          class="cursor-pointer"
+        />
+        <font-awesome-icon icon="fa-brands fa-github" class="cursor-pointer" />
+        <font-awesome-icon
+          icon="fa-brands fa-stack-overflow"
+          class="cursor-pointer"
+        />
+        <font-awesome-icon
+          icon="fa-brands fa-linkedin"
+          class="cursor-pointer"
+        />
       </div>
     </div>
   </div>
