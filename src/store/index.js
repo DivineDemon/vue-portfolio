@@ -12,7 +12,6 @@ export default createStore({
   mutations: {
     setDarkMode(state, payload) {
       state.darkMode = payload;
-      console.log(state.darkMode);
     },
   },
   actions: {},

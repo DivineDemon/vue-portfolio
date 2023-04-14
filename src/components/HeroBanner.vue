@@ -1,5 +1,8 @@
 <template>
-  <div class="w-screen h-screen flex items-center justify-center space-x-10">
+  <div
+    class="w-screen h-screen flex items-center justify-center space-x-10"
+    :class="{ 'bg-[#181A1B] text-white': dark }"
+  >
     <!-- Profile -->
     <img
       src="@/assets/img/profile.jpg"
@@ -8,7 +11,10 @@
     />
     <!-- Introduction -->
     <div class="flex flex-col items-start justify-center w-[30%]">
-      <p class="border-b border-black text-xs uppercase mb-5">
+      <p
+        class="border-b border-black text-xs uppercase mb-5"
+        :class="{ 'border-white': dark }"
+      >
         Hi! I'm Mushood Hanif / Fullstack Developer
       </p>
       <h1 class="text-6xl">Need a Website?</h1>
@@ -36,8 +42,24 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "HeroBanner",
-};
+<script setup>
+import { ref, watch } from "vue";
+import { useStore } from "vuex";
+
+// Initialize Store
+const store = useStore();
+
+// Data
+const dark = ref(false);
+
+// Watchers
+watch(
+  () => {
+    return store.getters.getDarkMode;
+  },
+  (newValue) => {
+    dark.value = newValue;
+    console.log(dark.value);
+  }
+);
 </script>

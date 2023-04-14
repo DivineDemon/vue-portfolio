@@ -1,9 +1,16 @@
 <template>
   <nav
     class="fixed top-0 w-screen px-10 py-5 flex flex-row items-center justify-between space-x-10 backdrop-blur-sm bg-white/30"
+    :class="dark ? 'text-white bg-black/30' : 'text-black'"
   >
     <!-- Logo -->
-    <img src="@/assets/img/logo.png" alt="logo" class="w-10 h-10" />
+    <img
+      v-if="dark"
+      src="@/assets/img/logo-light.png"
+      alt="logo"
+      class="w-10 h-10"
+    />
+    <img v-else src="@/assets/img/logo.png" alt="logo" class="w-10 h-10" />
     <div class="hidden flex-1 w-full lg:flex items-center justify-between">
       <!-- Nav Items -->
       <ul class="flex flex-row items-center justify-center space-x-10">
@@ -28,26 +35,34 @@
   </nav>
 </template>
 
-<script>
+<script setup>
+import { ref, watch } from "vue";
+import { useStore } from "vuex";
+
 import DropDown from "@/utils/DropDown.vue";
 import DarkMode from "@/utils/DarkMode.vue";
 
-export default {
-  name: "NavBar",
-  components: {
-    DropDown,
-    DarkMode,
+// Initialize Store
+const store = useStore();
+
+// Data
+const dark = ref(false);
+const dropDown = ref([
+  "Services",
+  "Experience",
+  "Projects",
+  "Contact",
+  "Download Resume",
+]);
+
+// Watchers
+watch(
+  () => {
+    return store.getters.getDarkMode;
   },
-  data() {
-    return {
-      dropDown: [
-        "Services",
-        "Experience",
-        "Projects",
-        "Contact",
-        "Download Resume",
-      ],
-    };
-  },
-};
+  (newValue) => {
+    dark.value = newValue;
+    console.log(dark.value);
+  }
+);
 </script>
