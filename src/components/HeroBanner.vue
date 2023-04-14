@@ -59,7 +59,6 @@ watch(
   },
   (newValue) => {
     dark.value = newValue;
-    console.log(dark.value);
   }
 );
 </script>

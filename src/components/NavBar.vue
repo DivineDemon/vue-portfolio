@@ -14,19 +14,44 @@
     <div class="hidden flex-1 w-full lg:flex items-center justify-between">
       <!-- Nav Items -->
       <ul class="flex flex-row items-center justify-center space-x-10">
-        <li class="hover:border-b-2 hover:border-black">Services</li>
-        <li class="hover:border-b-2 hover:border-black">Experience</li>
-        <li class="hover:border-b-2 hover:border-black">Projects</li>
-        <li class="hover:border-b-2 hover:border-black">Contact</li>
+        <li
+          class="hover:border-b-2 hover:border-black"
+          :class="{ 'hover:border-white': dark }"
+        >
+          Services
+        </li>
+        <li
+          class="hover:border-b-2 hover:border-black"
+          :class="{ 'hover:border-white': dark }"
+        >
+          Experience
+        </li>
+        <li
+          class="hover:border-b-2 hover:border-black"
+          :class="{ 'hover:border-white': dark }"
+        >
+          Projects
+        </li>
+        <li
+          class="hover:border-b-2 hover:border-black"
+          :class="{ 'hover:border-white': dark }"
+        >
+          Contact
+        </li>
       </ul>
       <!-- Nav Controls -->
       <div class="flex flex-row items-center justify-center space-x-10">
         <!-- Dark Mode Toggle -->
         <DarkMode />
         <!-- Download Resume -->
-        <button class="rounded-lg px-3 py-1 hover:border-2 hover:border-black">
+        <a
+          href="../assets/downloads/resume.pdf"
+          class="rounded-lg px-3 py-1 hover:border-2 hover:border-black"
+          :class="{ 'hover:border-white': dark }"
+          download
+        >
           Download Resume
-        </button>
+        </a>
       </div>
     </div>
 
@@ -62,7 +87,6 @@ watch(
   },
   (newValue) => {
     dark.value = newValue;
-    console.log(dark.value);
   }
 );
 </script>
