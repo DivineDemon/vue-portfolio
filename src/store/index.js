@@ -1,4 +1,5 @@
 import { createStore } from "vuex";
+import { vuexLocal } from "@/plugins/persist";
 
 export default createStore({
   state: {
@@ -16,4 +17,5 @@ export default createStore({
   },
   actions: {},
   modules: {},
+  plugins: [vuexLocal.plugin],
 });

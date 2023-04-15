@@ -8,18 +8,18 @@
     >
       <div class="w-[50%] flex flex-col items-start justify-center space-y-5">
         <h1
-          class="text-4xl border-b border-black"
+          class="text-6xl border-b border-black"
           :class="{ 'border-white': dark }"
         >
           About Me
         </h1>
-        <p>
+        <p class="text-gray-400">
           Hello! My name is Mushood and I enjoy creating things that live on the
           interwebs. My interest in web development started back in 2020. It was
           a hypetrain TBH — the amount of people catching web development like
           it was plague, it affected me as well!
         </p>
-        <p>
+        <p class="text-gray-400">
           Fast-forward to today, and I've had the privilege of working at a
           <a
             href="https://softsquare.io"
@@ -50,8 +50,12 @@
           >
           for a variety of clients.
         </p>
-        <p>Here are a few technologies I've been working with recently:</p>
-        <div class="w-full flex flex-row items-center justify-between px-5">
+        <p class="text-gray-400">
+          Here are a few technologies I've been working with recently:
+        </p>
+        <div
+          class="text-gray-400 w-full flex flex-row items-center justify-between px-5"
+        >
           <ul class="list-disc">
             <li>JavaScript</li>
             <li>Vue</li>
