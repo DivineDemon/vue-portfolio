@@ -23,29 +23,29 @@
           Fast-forward to today, and I've had the privilege of working at a
           <a
             href="https://softsquare.io"
-            class="font-semibold border-b border-black"
-            :class="{ 'border-white': dark }"
+            class="font-semibold border-b border-black text-black"
+            :class="{ 'border-white text-white': dark }"
             >start-up</a
           >,
           <a
             href="https://github.com/DivineDemon/GuardJobPosting"
-            class="font-semibold border-b border-black"
-            :class="{ 'border-white': dark }"
+            class="font-semibold border-b border-black text-black"
+            :class="{ 'border-white text-white': dark }"
             >building a start-up</a
           >
           and
           <a
             href="https://www.purelogics.net/"
-            class="font-semibold border-b border-black"
-            :class="{ 'border-white': dark }"
+            class="font-semibold border-b border-black text-black"
+            :class="{ 'border-white text-white': dark }"
             >a huge corporation.</a
           >
           My main focus these days is building accessible, inclusive products
           and digital experiences at
           <a
             href="https://www.purelogics.net/"
-            class="font-semibold border-b border-black"
-            :class="{ 'border-white': dark }"
+            class="font-semibold border-b border-black text-black"
+            :class="{ 'border-white text-white': dark }"
             >PureLogics</a
           >
           for a variety of clients.
@@ -54,7 +54,8 @@
           Here are a few technologies I've been working with recently:
         </p>
         <div
-          class="text-gray-400 w-full flex flex-row items-center justify-between px-5"
+          class="text-black w-full flex flex-row items-center justify-between px-5"
+          :class="{ 'text-white': dark }"
         >
           <ul class="list-disc">
             <li>JavaScript</li>
@@ -84,7 +85,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, onMounted } from "vue";
 import { useStore } from "vuex";
 
 // Initialize Store
@@ -102,4 +103,9 @@ watch(
     dark.value = newValue;
   }
 );
+
+// Mounted
+onMounted(() => {
+  dark.value = JSON.parse(localStorage.getItem("vuex")).darkMode;
+});
 </script>

@@ -61,7 +61,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, onMounted } from "vue";
 import { useStore } from "vuex";
 
 import DropDown from "@/utils/DropDown.vue";
@@ -89,4 +89,9 @@ watch(
     dark.value = newValue;
   }
 );
+
+// Mounted Hook
+onMounted(() => {
+  dark.value = JSON.parse(localStorage.getItem("vuex")).darkMode;
+});
 </script>

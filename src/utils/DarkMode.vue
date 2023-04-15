@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, onMounted } from "vue";
 import { Switch } from "@headlessui/vue";
 import { useStore } from "vuex";
 
@@ -40,5 +40,10 @@ const enabled = ref(false);
 // Watchers
 watch(enabled, (newValue) => {
   store.commit("setDarkMode", newValue);
+});
+
+// Mounted
+onMounted(() => {
+  enabled.value = JSON.parse(localStorage.getItem("vuex")).darkMode;
 });
 </script>
