@@ -1,5 +1,6 @@
 <template>
   <div
+    id="about"
     class="w-screen h-screen flex flex-row items-center justify-center"
     :class="{ 'bg-[#181A1B] text-white': dark }"
   >

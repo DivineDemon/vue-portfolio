@@ -4,13 +4,12 @@
     :class="dark ? 'text-white bg-black/30' : 'text-black bg-white/30'"
   >
     <!-- Logo -->
-    <img
-      v-if="dark"
-      src="@/assets/img/logo-light.png"
-      alt="logo"
-      class="w-10 h-10"
-    />
-    <img v-else src="@/assets/img/logo.png" alt="logo" class="w-10 h-10" />
+    <a v-if="dark" href="#home">
+      <img src="@/assets/img/logo-light.png" alt="logo" class="w-10 h-10" />
+    </a>
+    <a v-else href="#home">
+      <img src="@/assets/img/logo.png" alt="logo" class="w-10 h-10" />
+    </a>
     <div class="hidden flex-1 w-full lg:flex items-center justify-between">
       <!-- Nav Items -->
       <ul class="flex flex-row items-center justify-center space-x-10">
@@ -18,19 +17,19 @@
           class="cursor-pointer hover:border-b-2 hover:border-black"
           :class="{ 'hover:border-white': dark }"
         >
-          Services
+          <a href="#about">About</a>
         </li>
         <li
           class="cursor-pointer hover:border-b-2 hover:border-black"
           :class="{ 'hover:border-white': dark }"
         >
-          Experience
+          <a href="#experience">Experience</a>
         </li>
         <li
           class="cursor-pointer hover:border-b-2 hover:border-black"
           :class="{ 'hover:border-white': dark }"
         >
-          Projects
+          Work
         </li>
         <li
           class="cursor-pointer hover:border-b-2 hover:border-black"

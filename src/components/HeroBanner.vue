@@ -1,5 +1,6 @@
 <template>
   <div
+    id="home"
     class="w-screen h-screen flex items-center justify-center space-x-10"
     :class="{ 'bg-[#181A1B] text-white': dark }"
   >
