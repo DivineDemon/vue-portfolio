@@ -7,6 +7,7 @@ import {
   faSun,
   faMoon,
   faPersonCircleQuestion,
+  faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -28,7 +29,8 @@ library.add(
   faLinkedin,
   faSun,
   faMoon,
-  faPersonCircleQuestion
+  faPersonCircleQuestion,
+  faLink
 );
 
 createApp(App)
