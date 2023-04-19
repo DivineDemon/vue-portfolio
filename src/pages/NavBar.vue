@@ -29,7 +29,7 @@
           class="cursor-pointer hover:border-b-2 hover:border-black"
           :class="{ 'hover:border-white': dark }"
         >
-          Work
+          <a href="#work">Work</a>
         </li>
         <li
           class="cursor-pointer hover:border-b-2 hover:border-black"
