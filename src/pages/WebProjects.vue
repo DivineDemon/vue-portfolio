@@ -1,7 +1,7 @@
 <template>
   <div
     id="work"
-    class="w-screen h-screen flex flex-col items-center"
+    class="w-screen flex flex-col items-center"
     :class="dark ? 'bg-[#181A1B] text-white' : 'bg-white text-black'"
   >
     <h1

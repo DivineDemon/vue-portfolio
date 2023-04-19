@@ -69,7 +69,7 @@ export const appInfo = [
     img: "caresocius.png",
     name: "caresocius",
     description:
-      "Caresocius is a software company focused on building a secure Ecosystem in the field of health travel. This opens up the door to be on the forefront of an industry that has not yet caught up with the global nature of the digital age.",
+      "Caresocius is a software company focused on building a secure Ecosystem in the field of health travel.",
     stack: ["Vue 3", "BootstrapVue", "Vuex"],
     github: "",
     link: "https://caresocius.org/en",
@@ -89,7 +89,7 @@ export const appInfo = [
     img: "sedcard.png",
     name: "Model Platform",
     description:
-      "SedCard is a Professional Composite Card Maker for Models. It helps create professional grade Composite cards easily and allows the user to download it as a PDF too.The professional Models need a Comp Card more than ever! That's why everyone can now easily create a amazing Composite Card and immediately download as digital PDF and JPG file.SedCard provides amazing designs and templates for the cover as well as for the back of your modeling card.Our latest feature allows actors and actress to add their references or any text instead of your measurements.",
+      "Model Platform is a Professional Composite Card Maker for Models. It helps create professional grade Composite cards easily and allows the user to download it as a PDF too.",
     stack: ["Vue 2", "Tailwind CSS"],
     github: "",
     link: "https://designer.modelplatform.com/headshots/fh",
@@ -99,9 +99,70 @@ export const appInfo = [
     img: "sneakers123.png",
     name: "Sneakers123",
     description:
-      "Sneakers123 is a search enginer for Sneaker collectors, enthusiasts and hypebeasts that need to find sneakers and make the process a but easier.This search engine provides information on the location, size, price and everything you basically would want to know about a shoe.",
+      "Sneakers123 is a search engine for Sneaker collectors, enthusiasts and hypebeasts that need to find sneakers but want the process to be a bit easier.",
     stack: ["Nuxt 2", "BootstrapVue", "Laravel"],
     github: "",
     link: "https://sneakers123.com/",
+  },
+];
+
+export const repoInfo = [
+  {
+    id: 1,
+    name: "cookr",
+    repo: "https://www.github.com/DivineDemon/cookr",
+    link: "",
+    description:
+      "A Recipe Sharing App for Users to Share, Like, Follow and Download their Favourite Recipes and Creators!",
+    stack: ["Vue 3", "Node.js", "MySQL"],
+  },
+  {
+    id: 2,
+    name: "Tik-Tik",
+    repo: "https://www.github.com/DivineDemon/tik-tok-clone",
+    link: "http://tik-tok-clone-red.vercel.app/",
+    description: "A Tik-Tok Clone!",
+    stack: ["Next.js (TS)", "Sanity CMS"],
+  },
+  {
+    id: 3,
+    name: "Project Management",
+    repo: "https://www.github.com/DivineDemon/project-management",
+    link: "",
+    description: "Basic Project Management App",
+    stack: ["React", "Node.js", "MongoDB"],
+  },
+  {
+    id: 4,
+    name: "Reddit Clone",
+    repo: "https://www.github.com/DivineDemon/reddit-clone",
+    link: "https://reddit-clone-eosin.vercel.app/",
+    description: "A Reddit Clone",
+    stack: ["Next.js (TS), MongoDB"],
+  },
+  {
+    id: 5,
+    name: "Cyber ML",
+    repo: "https://www.github.com/DivineDemon/cyber-ml",
+    link: "",
+    description:
+      "Using a Machine Learning Model as a 3rd Layer in 2FA to provide security against phishing.",
+    stack: ["Flask", "Jupyter", "scikit-learn"],
+  },
+  {
+    id: 6,
+    name: "Instagram Clone",
+    repo: "https://www.github.com/DivineDemon/instagram-clone",
+    link: "https://instagram-clone-beryl-ten.vercel.app/",
+    description: "An Instagram Clone",
+    stack: ["Next.js", "Firebase"],
+  },
+  {
+    id: 7,
+    name: "MediPing",
+    repo: "https://github.com/DivineDemon/MediPing",
+    link: "https://medi-ping.netlify.app/",
+    description: "Slack Clone but for Medical Professionals",
+    stack: ["React", "Node.js", "Stream Chat"],
   },
 ];

@@ -1,48 +1,72 @@
 <template>
-  <div class="w-[50%] flex items-center justify-center relative">
+  <div class="w-[70%] flex flex-col items-center justify-center relative">
     <div
-      class="w-[70%] absolute top-10 left-0 shadow-2xl bg-black"
+      class="my-20 flex flex-row items-center justify-center w-full"
       v-for="app in appInfo"
       :key="app.id"
     >
-      <img
-        :src="require(`@/assets/img/${app.img}`)"
-        alt="binaziz"
-        class="w-full opacity-50 hover:opacity-100"
-      />
-    </div>
-    <div
-      class="w-[50%] flex flex-col items-end justify-end space-y-5 absolute top-20 right-0"
-      v-for="app in appInfo"
-      :key="app.id"
-    >
-      <p class="text-xs underline uppercase">featured project</p>
-      <h1 class="text-xl font-semibold capitalize">{{ app.name }}</h1>
-      <p
-        class="w-full p-3 text-right backdrop-blur-sm"
-        :class="dark ? 'text-white bg-black/30' : 'text-black bg-white/30'"
+      <div class="w-[50%]" :class="app.id % 2 !== 0 && 'order-last'">
+        <img
+          :src="require(`@/assets/img/${app.img}`)"
+          alt="binaziz"
+          class="w-full rounded-lg shadow-xl"
+        />
+      </div>
+      <div
+        class="w-[50%] flex flex-col space-y-5"
+        :class="
+          app.id % 2 !== 0
+            ? 'items-start justify-start'
+            : 'items-end justify-end'
+        "
       >
-        {{ app.description }}
-      </p>
-      <ul
-        v-for="tech in app.techstack"
-        :key="tech"
-        class="w-full text-xs flex flex-row items-end justify-end space-x-5"
-      >
-        <li>{{ tech }}</li>
-      </ul>
-      <ul class="w-full text-xs flex flex-row items-end justify-end space-x-10">
-        <li>
-          <a :href="app.github">
-            <font-awesome-icon icon="fa-brands fa-github" class="w-6 h-6" />
-          </a>
-        </li>
-        <li>
-          <a :href="app.link">
-            <font-awesome-icon icon="fa-solid fa-link" class="w-6 h-6" />
-          </a>
-        </li>
-      </ul>
+        <p class="text-xs underline uppercase">featured project</p>
+        <h1 class="text-xl font-semibold capitalize">{{ app.name }}</h1>
+        <div
+          class="w-[75%] p-3"
+          :class="
+            dark
+              ? 'text-black bg-white rounded-lg'
+              : 'text-white bg-black rounded-lg'
+          "
+        >
+          <p
+            class="w-full"
+            :class="app.id % 2 !== 0 ? 'text-left' : 'text-right'"
+          >
+            {{ app.description }}
+          </p>
+        </div>
+        <ul
+          class="w-full text-xs flex flex-row space-x-5"
+          :class="
+            app.id % 2 !== 0
+              ? 'items-start justify-start'
+              : 'items-end justify-end'
+          "
+        >
+          <li v-for="tech in app.stack" :key="tech">{{ tech }}</li>
+        </ul>
+        <ul
+          class="w-full text-xs flex flex-row space-x-10"
+          :class="
+            app.id % 2 !== 0
+              ? 'items-start justify-start'
+              : 'items-end justify-end'
+          "
+        >
+          <li v-if="app.github !== ''">
+            <a :href="app.github">
+              <font-awesome-icon icon="fa-brands fa-github" class="w-6 h-6" />
+            </a>
+          </li>
+          <li v-if="app.link !== ''">
+            <a :href="app.link">
+              <font-awesome-icon icon="fa-solid fa-link" class="w-6 h-6" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
