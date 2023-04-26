@@ -6,12 +6,16 @@
   >
     <!-- Profile -->
     <img
+      v-motion-slide-left
       src="@/assets/img/profile.jpg"
       alt="profile"
       class="rounded-full w-[17.5%] h-[55%] object-cover shadow-2xl"
     />
     <!-- Introduction -->
-    <div class="flex flex-col items-start justify-center w-[30%]">
+    <div
+      v-motion-slide-right
+      class="flex flex-col items-start justify-center w-[30%]"
+    >
       <p
         class="border-b border-black text-xs uppercase mb-5"
         :class="{ 'border-white': dark }"

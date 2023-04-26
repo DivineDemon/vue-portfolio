@@ -5,7 +5,11 @@
       v-for="app in appInfo"
       :key="app.id"
     >
-      <div class="w-[50%]" :class="app.id % 2 !== 0 && 'order-last'">
+      <div
+        v-motion-slide-left
+        class="w-[50%]"
+        :class="app.id % 2 !== 0 && 'order-last'"
+      >
         <img
           :src="require(`@/assets/img/${app.img}`)"
           alt="binaziz"
@@ -13,6 +17,7 @@
         />
       </div>
       <div
+        v-motion-slide-right
         class="w-[50%] flex flex-col space-y-5"
         :class="
           app.id % 2 !== 0

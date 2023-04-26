@@ -10,7 +10,7 @@
     >
       Where I've Worked
     </h1>
-    <div class="w-[50%] mx-auto grid grid-cols-12">
+    <div v-motion-pop class="w-[50%] mx-auto grid grid-cols-12">
       <!-- Labels -->
       <div class="col-span-4 flex flex-col items-center justify-center">
         <ul>

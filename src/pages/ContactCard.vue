@@ -17,6 +17,7 @@
     </p>
     <form
       ref="form"
+      v-motion-slide-top
       @submit.prevent="sendEmail"
       class="flex flex-col items-center justify-center w-[35%]"
     >

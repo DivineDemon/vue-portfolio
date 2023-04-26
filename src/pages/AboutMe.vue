@@ -7,7 +7,10 @@
     <div
       class="flex flex-row items-center justify-center space-x-10 w-[50%] mx-auto"
     >
-      <div class="w-[50%] flex flex-col items-start justify-center space-y-5">
+      <div
+        v-motion-slide-bottom
+        class="w-[50%] flex flex-col items-start justify-center space-y-5"
+      >
         <h1
           class="text-6xl border-b border-black"
           :class="{ 'border-white': dark }"
@@ -74,7 +77,7 @@
           </ul>
         </div>
       </div>
-      <div class="w-[50%] flex items-center justify-center">
+      <div v-motion-slide-top class="w-[50%] flex items-center justify-center">
         <img
           src="@/assets/img/about.jpg"
           alt="profile"

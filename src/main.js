@@ -1,4 +1,5 @@
 import { createApp } from "vue";
+import { MotionPlugin } from "@vueuse/motion";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
@@ -39,5 +40,6 @@ library.add(
 
 createApp(App)
   .use(store)
+  .use(MotionPlugin)
   .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");
