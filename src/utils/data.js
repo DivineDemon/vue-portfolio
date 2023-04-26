@@ -59,7 +59,7 @@ export const appInfo = [
     img: "binaziz.png",
     name: "bin aziz builders",
     description:
-      "A national construction company wanting to expand their horizon and reach needed a IT infrastructure for their business model.Work in Progress.",
+      "A national construction company wanting to expand their horizon and reach needed a IT infrastructure for their business model. Work in Progress.",
     stack: ["Vue 3", "Tailwind CSS", "Font Awesome"],
     github: "https://github.com/DivineDemon/coming-soon",
     link: "https://binaziz.com",

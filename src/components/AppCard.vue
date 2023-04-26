@@ -5,14 +5,18 @@
   >
     <div class="w-[100%] flex flex-row items-center justify-between">
       <font-awesome-icon icon="fa-solid fa-folder" class="w-8 h-8" />
-      <div class="flex flex-row items-center justify-center space-x-5">
-        <a :href="repo.repo">
-          <font-awesome-icon icon="fa-brands fa-github" class="w-6 h-6" />
-        </a>
-        <a :href="repo.link">
-          <font-awesome-icon icon="fa-solid fa-link" class="w-6 h-6" />
-        </a>
-      </div>
+      <ul class="flex flex-row items-center justify-center space-x-5">
+        <li v-if="repo.repo !== ''">
+          <a :href="repo.repo">
+            <font-awesome-icon icon="fa-brands fa-github" class="w-6 h-6" />
+          </a>
+        </li>
+        <li v-if="repo.link !== ''">
+          <a :href="repo.link">
+            <font-awesome-icon icon="fa-solid fa-link" class="w-6 h-6" />
+          </a>
+        </li>
+      </ul>
     </div>
     <div
       class="w-[100%] flex flex-1 flex-col items-start justify-between space-y-4 text-left mt-7"
