@@ -6,7 +6,7 @@
       :key="app.id"
     >
       <div
-        v-motion-slide-left
+        v-motion-slide-visible-left
         class="w-[50%]"
         :class="app.id % 2 !== 0 && 'order-last'"
       >
@@ -17,7 +17,7 @@
         />
       </div>
       <div
-        v-motion-slide-right
+        v-motion-slide-visible-right
         class="w-[50%] flex flex-col space-y-5"
         :class="
           app.id % 2 !== 0

@@ -8,7 +8,12 @@
       class="flex flex-row items-center justify-center space-x-10 w-[50%] mx-auto"
     >
       <div
-        v-motion-slide-bottom
+        v-motion-slide-visible-bottom
+        :enter="{
+          transition: {
+            delay: 5000,
+          },
+        }"
         class="w-[50%] flex flex-col items-start justify-center space-y-5"
       >
         <h1
@@ -77,7 +82,10 @@
           </ul>
         </div>
       </div>
-      <div v-motion-slide-top class="w-[50%] flex items-center justify-center">
+      <div
+        v-motion-slide-visible-top
+        class="w-[50%] flex items-center justify-center"
+      >
         <img
           src="@/assets/img/about.jpg"
           alt="profile"
