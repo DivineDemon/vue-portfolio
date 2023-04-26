@@ -45,8 +45,7 @@
         <DarkMode />
         <!-- Download Resume -->
         <a
-          href="https://mushoodhanif.live/assets/downloads/resume.pdf"
-          target="_blank"
+          href="@/assets/downloads/resume.pdf"
           class="rounded-lg px-3 py-1 hover:border-2 hover:border-black"
           :class="{ 'hover:border-white': dark }"
           download
