@@ -48,7 +48,6 @@
           href="https://www.mediafire.com/file/mtn1vk35a2rcgqe/Resume.pdf/file"
           class="rounded-lg px-3 py-1 hover:border-2 hover:border-black"
           :class="{ 'hover:border-white': dark }"
-          download
         >
           Download Resume
         </a>
