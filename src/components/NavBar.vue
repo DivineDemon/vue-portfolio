@@ -44,11 +44,8 @@
         <!-- Dark Mode Toggle -->
         <DarkMode />
         <!-- Download Resume -->
-        <!-- <a className="p-text" target="_blank" href="{images.resume}" download>
-          My Resume
-        </a> -->
         <a
-          :href="Resume"
+          href="https://mushoodhanif.live/assets/downloads/resume.pdf"
           target="_blank"
           class="rounded-lg px-3 py-1 hover:border-2 hover:border-black"
           :class="{ 'hover:border-white': dark }"
@@ -70,7 +67,7 @@ import { ref, watch, onMounted } from "vue";
 
 import DropDown from "@/utils/DropDown.vue";
 import DarkMode from "@/utils/DarkMode.vue";
-import Resume from "@/assets/downloads/resume.pdf";
+// import Resume from "@/assets/downloads/resume.pdf";
 
 // Initialize Store
 const store = useStore();
