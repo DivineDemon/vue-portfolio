@@ -35,7 +35,7 @@
           class="cursor-pointer hover:border-b-2 hover:border-black"
           :class="{ 'hover:border-white': dark }"
         >
-          Contact
+          <a href="#contact">Contact</a>
         </li>
       </ul>
       <!-- Nav Controls -->

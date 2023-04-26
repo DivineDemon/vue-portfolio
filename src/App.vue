@@ -6,6 +6,7 @@
     <WorkExperience />
     <WebProjects />
     <OtherProjects />
+    <ContactCard />
     <SocialButtons />
     <HoverEmail />
   </div>
@@ -20,6 +21,7 @@ import HoverEmail from "./pages/HoverEmail.vue";
 import WorkExperience from "./pages/WorkExperience.vue";
 import WebProjects from "./pages/WebProjects.vue";
 import OtherProjects from "./pages/OtherProjects.vue";
+import ContactCard from "./pages/ContactCard.vue";
 
 export default {
   name: "App",
@@ -32,6 +34,7 @@ export default {
     HoverEmail,
     WebProjects,
     OtherProjects,
+    ContactCard,
   },
 };
 </script>
