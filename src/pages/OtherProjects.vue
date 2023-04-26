@@ -9,8 +9,11 @@
     >
       Other Noteworthy Projects
     </h1>
-    <a href="https://www.github.com/DivineDemon" class="text-sm lowercase">
-      view the archive
+    <a
+      href="https://www.github.com/DivineDemon"
+      class="text-sm lowercase hover:underline"
+    >
+      ( view the archive )
     </a>
     <div class="w-[50%] grid grid-cols-3 gap-3">
       <AppCard v-for="repo in repoInfo" :key="repo.id" :repo="repo" />

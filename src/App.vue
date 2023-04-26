@@ -7,6 +7,7 @@
     <WebProjects />
     <OtherProjects />
     <ContactCard />
+    <FooterBar />
     <SocialButtons />
     <HoverEmail />
   </div>
@@ -22,6 +23,7 @@ import WorkExperience from "./pages/WorkExperience.vue";
 import WebProjects from "./pages/WebProjects.vue";
 import OtherProjects from "./pages/OtherProjects.vue";
 import ContactCard from "./pages/ContactCard.vue";
+import FooterBar from "./components/FooterBar.vue";
 
 export default {
   name: "App",
@@ -35,6 +37,7 @@ export default {
     WebProjects,
     OtherProjects,
     ContactCard,
+    FooterBar,
   },
 };
 </script>
