@@ -32,8 +32,10 @@
         <label for="name" class="w-full text-left">Name:</label>
         <input
           type="text"
+          id="name"
           name="user_name"
           placeholder="Your Name Here"
+          autocomplete="username"
           class="text-black w-full px-5 py-3 rounded-lg shadow-lg focus:border-0 focus:-outline-0 focus:ring-0 focus-visible:border-0 focus-visible:outline-0 focus-visible:ring-0"
           :class="dark ? 'bg-white' : 'bg-gray-200'"
         />
@@ -42,8 +44,10 @@
         <label for="email" class="w-full text-left">Email:</label>
         <input
           type="email"
+          id="email"
           name="user_email"
           placeholder="Your Email Here"
+          autocomplete="email"
           class="text-black w-full px-5 py-3 rounded-lg shadow-lg focus:border-0 focus:-outline-0 focus:ring-0 focus-visible:border-0 focus-visible:outline-0 focus-visible:ring-0"
           :class="dark ? 'bg-white' : 'bg-gray-200'"
         />
@@ -52,6 +56,7 @@
         <label for="message" class="w-full text-left">Message:</label>
         <textarea
           name="message"
+          id="message"
           cols="46"
           rows="3"
           class="text-black w-full px-5 py-3 rounded-lg shadow-lg focus:border-0 focus:-outline-0 focus:ring-0 focus-visible:border-0 focus-visible:outline-0 focus-visible:ring-0"
