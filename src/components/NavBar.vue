@@ -56,7 +56,10 @@
     </div>
 
     <!-- Responsive Navbar -->
-    <DropDown class="flex lg:hidden" :items="dropDown" />
+    <div class="flex lg:hidden flex-row items-center justify-center space-x-3">
+      <DarkMode />
+      <DropDown :items="dropDown" />
+    </div>
   </nav>
 </template>
 
@@ -66,20 +69,13 @@ import { ref, watch, onMounted } from "vue";
 
 import DropDown from "@/utils/DropDown.vue";
 import DarkMode from "@/utils/DarkMode.vue";
-// import Resume from "@/assets/downloads/resume.pdf";
 
 // Initialize Store
 const store = useStore();
 
 // Data
 const dark = ref(false);
-const dropDown = ref([
-  "Services",
-  "Experience",
-  "Projects",
-  "Contact",
-  "Download Resume",
-]);
+const dropDown = ref(["Download Resume"]);
 
 // Watchers
 watch(
