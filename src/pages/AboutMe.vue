@@ -9,11 +9,7 @@
     >
       <div
         v-motion-slide-visible-bottom
-        :enter="{
-          transition: {
-            delay: 5000,
-          },
-        }"
+        :delay="300"
         class="w-[50%] flex flex-col items-start justify-center space-y-5"
       >
         <h1
@@ -84,6 +80,7 @@
       </div>
       <div
         v-motion-slide-visible-top
+        :delay="300"
         class="w-[50%] flex items-center justify-center"
       >
         <img

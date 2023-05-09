@@ -1,6 +1,7 @@
 <template>
   <div
     v-motion-slide-bottom
+    :delay="300"
     class="fixed bottom-0 h-[500px] right-0 flex flex-col items-center justify-center space-y-10"
     :class="dark ? 'text-white' : 'text-black'"
   >

@@ -7,10 +7,16 @@
     <h1
       class="text-6xl border-b"
       :class="dark ? 'border-white' : 'border-black'"
+      v-motion-pop-visible
+      :delay="300"
     >
       Where I've Worked
     </h1>
-    <div v-motion-pop-visible class="w-[50%] mx-auto grid grid-cols-12">
+    <div
+      v-motion-pop-visible
+      :delay="300"
+      class="w-[50%] mx-auto grid grid-cols-12"
+    >
       <!-- Labels -->
       <div class="col-span-4 flex flex-col items-center justify-center">
         <ul>
