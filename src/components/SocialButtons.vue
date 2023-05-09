@@ -2,7 +2,7 @@
   <div
     v-motion-slide-bottom
     :delay="300"
-    class="fixed bottom-0 h-[500px] left-20 flex flex-col items-center justify-center space-y-10"
+    class="fixed bottom-0 w-[100px] h-[500px] left-0 flex flex-col items-center justify-center space-y-10"
     :class="dark ? 'text-white' : 'text-black'"
   >
     <font-awesome-icon icon="fa-brands fa-facebook" class="cursor-pointer" />
