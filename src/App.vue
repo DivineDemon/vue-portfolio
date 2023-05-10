@@ -1,16 +1,14 @@
 <template>
-  <div id="app" class="relative overflow-x-hidden">
-    <NavBar />
-    <HeroBanner />
-    <AboutMe />
-    <WorkExperience />
-    <WebProjects />
-    <OtherProjects />
-    <ContactCard />
-    <FooterBar />
-    <SocialButtons />
-    <HoverEmail />
-  </div>
+  <NavBar />
+  <HeroBanner />
+  <AboutMe />
+  <WorkExperience />
+  <WebProjects />
+  <OtherProjects />
+  <ContactCard />
+  <FooterBar />
+  <SocialButtons />
+  <HoverEmail />
 </template>
 
 <script>
