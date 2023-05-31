@@ -2,7 +2,8 @@
   <Menu as="div" class="relative inline-block text-left">
     <div>
       <MenuButton
-        class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-100"
+        class="inline-flex w-full justify-center rounded-lg px-4 py-2 text-sm font-medium focus:border-0 focus:outline-0 focus:ring-0 focus-visible:border-0 focus-visible:outline-0 focus-visible:ring-0"
+        :class="dark ? 'bg-white text-[#181A1B]' : 'bg-[#181A1B] text-white'"
       >
         <font-awesome-icon icon="fa-solid fa-bars" />
       </MenuButton>
@@ -17,15 +18,16 @@
       leave-to-class="transform scale-95 opacity-0"
     >
       <MenuItems
-        class="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+        class="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+        :class="dark ? 'bg-white text-[#181A1B]' : 'bg-[#181A1B] text-white'"
       >
         <div class="px-1 py-1">
-          <MenuItem v-slot="{ active }" v-for="item in items" :key="item">
+          <MenuItem v-for="item in items" :key="item">
             <button
-              :class="[
-                active ? 'bg-gray-100' : 'text-gray-900',
-                'group flex w-full items-center rounded-md px-2 py-2 text-sm',
-              ]"
+              class="group flex w-full items-center rounded-md px-2 py-2 text-sm"
+              :class="
+                dark ? 'bg-white text-[#181A1B]' : 'bg-[#181A1B] text-white'
+              "
             >
               {{ item }}
             </button>
@@ -36,19 +38,34 @@
   </Menu>
 </template>
 
-<script>
+<script setup>
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
+import { ref, watch, onMounted } from "vue";
+import { useStore } from "vuex";
 
-export default {
-  name: "DropDown",
-  components: {
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuItems,
+// Props
+defineProps({
+  items: Array,
+});
+
+// Initialize Store
+const store = useStore();
+
+// Data
+const dark = ref(false);
+
+// Watchers
+watch(
+  () => {
+    return store.getters.getDarkMode;
   },
-  props: {
-    items: Array,
-  },
-};
+  (newValue) => {
+    dark.value = newValue;
+  }
+);
+
+// Mounted
+onMounted(() => {
+  dark.value = JSON.parse(localStorage.getItem("vuex")).darkMode;
+});
 </script>

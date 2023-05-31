@@ -14,7 +14,7 @@
 
 <script setup>
 import { useStore } from "vuex";
-import { defineProps, ref, watch, onMounted } from "vue";
+import { ref, watch, onMounted } from "vue";
 
 // Initialize Store
 const store = useStore();
