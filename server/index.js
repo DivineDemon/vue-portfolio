@@ -26,7 +26,7 @@ app.use("/api/app-info", appInfoRouter);
 app.use("/api/repo-info", repoInfoRouter);
 app.use("/api/experience", experienceRouter);
 
-// Starting the Server
+// Initializing the Server
 app.listen(PORT);
 
 export default app;
