@@ -14,10 +14,14 @@ const PORT = process.env.PORT || 3000; // Initialize Port
 // Middleware
 app.use(cors());
 app.use(errorHandler);
+app.use(express.static('public'));
 app.use(express.json({ limit: "200mb", extended: true }));
 app.use(express.urlencoded({ limit: "200mb", extended: true }));
 
 // Routes
+app.get("/", (req, res) => {
+  res.sendFile('index.html', { root: path.join(__dirname, 'public') });
+});
 app.use("/api/app-info", appInfoRouter);
 app.use("/api/repo-info", repoInfoRouter);
 app.use("/api/experience", experienceRouter);
