@@ -29,9 +29,7 @@ app.use("/api/experience", experienceRouter);
 // Starting the Server
 const startServer = () => {
   try {
-    app.listen(PORT, () => {
-      console.log(`Server Active on http://localhost:${PORT}`);
-    });
+    app.listen(PORT);
   } catch (error) {
     console.error(error.message);
   }
