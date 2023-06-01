@@ -27,14 +27,6 @@ app.use("/api/repo-info", repoInfoRouter);
 app.use("/api/experience", experienceRouter);
 
 // Starting the Server
-const startServer = () => {
-  try {
-    app.listen(PORT);
-  } catch (error) {
-    console.error(error.message);
-  }
-};
-
-startServer();
+app.listen(PORT);
 
 export default app;
