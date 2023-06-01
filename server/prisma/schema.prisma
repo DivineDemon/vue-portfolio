@@ -11,12 +11,12 @@ datasource db {
 }
 
 model Experience {
-  id              String    @id @default(auto()) @map("_id") @db.ObjectId
-  name            String
-  from            DateTime
-  to              String
-  job             String
-  type            String
+  id               String    @id @default(auto()) @map("_id") @db.ObjectId
+  name             String
+  from             DateTime
+  to               String
+  job              String
+  type             String
   responsibilities String[]
 }
 
