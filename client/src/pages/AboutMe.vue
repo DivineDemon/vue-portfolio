@@ -1,12 +1,13 @@
 <template>
   <div
-    v-motion-slide-visible-bottom
-    :delay="600"
+    id="about"
     class="w-full h-screen flex flex-col lg:flex-row items-center justify-center space-x-0 lg:space-x-16"
     :class="{ 'bg-[#181A1B] text-white': dark }"
   >
     <div
-      class="order-2 lg:order-1 w-[75%] sm:w-[80%] lg:w-[50%] flex flex-col items-center sm:items-start justify-center space-y-5 text-xs sm:text-normal"
+      v-motion-slide-visible-bottom
+      :delay="600"
+      class="order-2 lg:order-1 w-[75%] sm:w-[80%] lg:w-[50%] flex flex-col items-center sm:items-start justify-center space-y-5 text-xs sm:text-normal lg:text-lg"
     >
       <h1
         class="text-4xl sm:text-6xl border-b border-black"

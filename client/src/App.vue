@@ -3,8 +3,8 @@
   <HeroBanner />
   <AboutMe />
   <WorkExperience />
-  <!-- <WebProjects />
-  <OtherProjects />
+  <WebProjects />
+  <!-- <OtherProjects />
   <ContactCard />
   <FooterBar /> -->
   <SocialButtons />
@@ -15,7 +15,7 @@
 // Pages
 import AboutMe from "./pages/AboutMe.vue";
 import HeroBanner from "./pages/HeroBanner.vue";
-// import WebProjects from "./pages/WebProjects.vue";
+import WebProjects from "./pages/WebProjects.vue";
 // import ContactCard from "./pages/ContactCard.vue";
 // import OtherProjects from "./pages/OtherProjects.vue";
 import WorkExperience from "./pages/WorkExperience.vue";
@@ -35,7 +35,7 @@ export default {
     WorkExperience,
     SocialButtons,
     HoverEmail,
-    // WebProjects,
+    WebProjects,
     // OtherProjects,
     // ContactCard,
     // FooterBar,
