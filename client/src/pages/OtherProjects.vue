@@ -7,7 +7,7 @@
       class="text-3xl border-b"
       :class="dark ? 'border-white' : 'border-black'"
       v-motion-pop-visible
-      :delay="300"
+      :delay="600"
     >
       Other Noteworthy Projects
     </h1>
@@ -15,7 +15,7 @@
       href="https://www.github.com/DivineDemon"
       class="text-sm lowercase hover:underline"
       v-motion-pop-visible
-      :delay="300"
+      :delay="600"
     >
       ( view the archive )
     </a>

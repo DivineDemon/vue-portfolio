@@ -8,14 +8,14 @@
       class="text-6xl border-b"
       :class="dark ? 'border-white' : 'border-black'"
       v-motion-pop-visible
-      :delay="300"
+      :delay="600"
     >
       Get in Touch
     </h1>
     <p
       class="text-gray-400 w-[35%] text-center"
       v-motion-pop-visible
-      :delay="300"
+      :delay="600"
     >
       Although I'm not currently looking for any new opportunities, my inbox is
       always open. Whether you have a question or just want to say hi, I'll try
@@ -24,7 +24,7 @@
     <form
       ref="form"
       v-motion-slide-visible-top
-      :delay="300"
+      :delay="600"
       @submit.prevent="sendEmail"
       class="flex flex-col items-center justify-center w-[35%]"
     >

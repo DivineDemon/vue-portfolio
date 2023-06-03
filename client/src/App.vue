@@ -1,7 +1,7 @@
 <template>
   <NavBar />
-  <!-- <HeroBanner />
-  <AboutMe /> -->
+  <HeroBanner />
+  <AboutMe />
   <WorkExperience />
   <!-- <WebProjects />
   <OtherProjects />
@@ -13,8 +13,8 @@
 
 <script>
 // Pages
-// import AboutMe from "./pages/AboutMe.vue";
-// import HeroBanner from "./pages/HeroBanner.vue";
+import AboutMe from "./pages/AboutMe.vue";
+import HeroBanner from "./pages/HeroBanner.vue";
 // import WebProjects from "./pages/WebProjects.vue";
 // import ContactCard from "./pages/ContactCard.vue";
 // import OtherProjects from "./pages/OtherProjects.vue";
@@ -30,8 +30,8 @@ export default {
   name: "App",
   components: {
     NavBar,
-    // HeroBanner,
-    // AboutMe,
+    HeroBanner,
+    AboutMe,
     WorkExperience,
     SocialButtons,
     HoverEmail,

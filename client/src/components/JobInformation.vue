@@ -1,17 +1,26 @@
 <template>
-  <div class="col-span-8 flex flex-col w-full">
+  <div class="flex flex-col w-full items-center justify-center">
     <span
-      class="text-xl font-semibold"
+      class="text-xl font-semibold flex flex-row items-center justify-center space-x-5"
       :class="dark ? 'text-white' : 'text-black'"
     >
-      {{ experience.job }} @ {{ experience.name }}
-      <span class="text-sm text-gray-400">({{ experience.type }})</span>
+      <!-- <span>{{ experience.job }} @ {{ experience.name }}</span> -->
+      <div
+        class="flex flex-col md:flex-row items-center justify-center space-x-5"
+      >
+        <span>{{ experience.job }}</span>
+        <span class="hidden md:inline-block">@</span>
+        <span>{{ experience.name }}</span>
+      </div>
+      <span class="hidden md:inline-block text-sm text-gray-400">
+        ({{ experience.type }})
+      </span>
     </span>
     <span class="mt-2 mb-5 text-sm text-gray-400">
       {{ experience.from }} &middot;
       {{ experience.to }}
     </span>
-    <ul class="list-disc">
+    <ul class="sm:list-disc w-[70%]">
       <li class="my-3" v-for="work in experience.responsibilities" :key="work">
         {{ work }}
       </li>

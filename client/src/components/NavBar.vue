@@ -1,7 +1,7 @@
 <template>
   <nav
     v-motion-fade
-    :delay="300"
+    :delay="600"
     class="fixed top-0 z-50 w-screen px-10 py-5 flex flex-row items-center justify-between space-x-10 backdrop-blur-sm"
     :class="dark ? 'text-white bg-black/30' : 'text-black bg-white/30'"
   >

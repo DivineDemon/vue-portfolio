@@ -7,7 +7,7 @@
     >
       <div
         v-motion-slide-visible-left
-        :delay="300"
+        :delay="600"
         class="w-[50%]"
         :class="app.id % 2 !== 0 && 'order-last'"
       >

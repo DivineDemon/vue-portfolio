@@ -1,7 +1,7 @@
 <template>
   <div
     v-motion-slide-visible-bottom
-    :delay="300"
+    :delay="600"
     class="w-full h-screen flex flex-col lg:flex-row items-center justify-center space-x-0 lg:space-x-16"
     :class="{ 'bg-[#181A1B] text-white': dark }"
   >
@@ -76,7 +76,7 @@
     </div>
     <div
       v-motion-slide-visible-top
-      :delay="300"
+      :delay="600"
       class="order-1 lg:order-2 2xl:w-[25%] h-[25%] lg:h-[50%] flex flex-col items-center justify-center space-y-5 my-8 lg:my-0"
     >
       <img

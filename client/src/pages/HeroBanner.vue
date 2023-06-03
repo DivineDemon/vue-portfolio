@@ -7,7 +7,7 @@
     <!-- Profile -->
     <img
       v-motion-slide-left
-      :delay="300"
+      :delay="600"
       src="@/assets/img/profile.jpg"
       alt="profile"
       class="hidden lg:flex rounded-full w-[17.5%] h-[55%] object-cover shadow-2xl"
@@ -15,7 +15,7 @@
     <!-- Introduction -->
     <div
       v-motion-slide-right
-      :delay="300"
+      :delay="600"
       class="flex flex-col items-center md:items-start justify-center w-[70%] md:w-[80%] lg:w-[30%]"
     >
       <p

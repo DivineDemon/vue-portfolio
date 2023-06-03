@@ -8,7 +8,7 @@
       class="mb-16 text-6xl border-b"
       :class="dark ? 'border-white' : 'border-black'"
       v-motion-pop-visible
-      :delay="300"
+      :delay="600"
     >
       Some Things I've Built
     </h1>
