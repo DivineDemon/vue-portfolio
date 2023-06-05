@@ -2,7 +2,7 @@
   <div
     v-motion-slide-bottom
     :delay="600"
-    class="fixed bottom-0 w-[50px] xs:w-[100px] h-[500px] right-0 flex flex-col items-center justify-center space-y-10"
+    class="fixed bottom-0 w-[40px] xs:w-[100px] h-[500px] right-0 flex flex-col items-center justify-center space-y-10"
     :class="dark ? 'text-white' : 'text-black'"
   >
     <p

@@ -3,7 +3,7 @@
     class="w-screen p-5 flex flex-col items-center justify-center space-y-3"
     :class="dark ? 'bg-[#181A1B] text-white' : 'bg-white text-black'"
   >
-    <p class="text-sm">
+    <p class="text-xs text-center md:text-sm md:text-left">
       <a href="https://www.github.com/DivineDemon" class="hover:underline">
         Designed and Built by Mushood Hanif
       </a>

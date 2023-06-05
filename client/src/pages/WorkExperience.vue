@@ -16,7 +16,7 @@
     <ul
       v-motion-pop-visible
       :delay="600"
-      class="w-full grid grid-rows-1 grid-cols-12"
+      class="w-[80%] grid grid-rows-1 grid-cols-12"
     >
       <div class="hidden xl:flex col-span-2" id="splitter" />
       <li

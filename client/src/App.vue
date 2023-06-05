@@ -5,8 +5,8 @@
   <WorkExperience />
   <WebProjects />
   <!-- <OtherProjects />
-  <ContactCard />
-  <FooterBar /> -->
+  <ContactCard /> -->
+  <FooterBar />
   <SocialButtons />
   <HoverEmail />
 </template>
@@ -22,7 +22,7 @@ import WorkExperience from "./pages/WorkExperience.vue";
 
 // Components
 import NavBar from "./components/NavBar.vue";
-// import FooterBar from "./components/FooterBar.vue";
+import FooterBar from "./components/FooterBar.vue";
 import HoverEmail from "./components/HoverEmail.vue";
 import SocialButtons from "./components/SocialButtons.vue";
 
@@ -38,7 +38,7 @@ export default {
     WebProjects,
     // OtherProjects,
     // ContactCard,
-    // FooterBar,
+    FooterBar,
   },
 };
 </script>

@@ -20,7 +20,7 @@
       {{ experience.from }} &middot;
       {{ experience.to }}
     </span>
-    <ul class="sm:list-disc w-[70%]">
+    <ul class="sm:list-disc w-[70%] text-xs md:text-normal lg:text-lg">
       <li class="my-3" v-for="work in experience.responsibilities" :key="work">
         {{ work }}
       </li>

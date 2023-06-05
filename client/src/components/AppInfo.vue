@@ -1,35 +1,35 @@
 <template>
   <div class="w-[70%] flex flex-col items-center justify-center relative">
     <div
-      class="my-20 flex flex-row items-center justify-center w-full"
+      class="py-20 flex flex-col lg:flex-row items-center justify-center w-full"
       v-for="app in appInfo"
       :key="app.id"
     >
       <div
         v-motion-slide-visible-left
         :delay="600"
-        class="w-[50%]"
+        class="w-[80%] lg:w-[50%]"
         :class="app.id % 2 !== 0 && 'order-last'"
       >
         <img
           :src="require(`@/assets/img/${app.img}`)"
           alt="binaziz"
-          class="w-full rounded-lg shadow-xl"
+          class="w-full rounded-lg shadow-xl my-5 lg:my-0"
         />
       </div>
       <div
         v-motion-slide-visible-right
-        class="w-[50%] flex flex-col space-y-5"
+        class="w-[80%] lg:w-[50%] flex flex-col space-y-5"
         :class="
           app.id % 2 !== 0
-            ? 'items-start justify-start'
-            : 'items-end justify-end'
+            ? 'items-center justify-center lg:items-start lg:justify-start'
+            : 'items-center justify-center lg:items-end lg:justify-end'
         "
       >
         <p class="text-xs underline uppercase">featured project</p>
         <h1 class="text-xl font-semibold capitalize">{{ app.name }}</h1>
         <div
-          class="w-[75%] p-3"
+          class="w-full lg:w-[75%] p-3"
           :class="
             dark
               ? 'text-black bg-white rounded-lg'
@@ -37,7 +37,7 @@
           "
         >
           <p
-            class="w-full"
+            class="w-full text-xs md:text-normal lg:text-lg"
             :class="app.id % 2 !== 0 ? 'text-left' : 'text-right'"
           >
             {{ app.description }}
@@ -47,8 +47,8 @@
           class="w-full text-xs flex flex-row space-x-5"
           :class="
             app.id % 2 !== 0
-              ? 'items-start justify-start'
-              : 'items-end justify-end'
+              ? 'items-center justify-center lg:items-start lg:justify-start'
+              : 'items-center justify-center lg:items-end lg:justify-end'
           "
         >
           <li v-for="tech in app.stack" :key="tech">{{ tech }}</li>
@@ -57,8 +57,8 @@
           class="w-full text-xs flex flex-row space-x-10"
           :class="
             app.id % 2 !== 0
-              ? 'items-start justify-start'
-              : 'items-end justify-end'
+              ? 'items-center justify-center lg:items-start lg:justify-start'
+              : 'items-center justify-center lg:items-end lg:justify-end'
           "
         >
           <li v-if="app.github !== ''">

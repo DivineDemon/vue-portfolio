@@ -1,11 +1,11 @@
 <template>
   <div
     id="work"
-    class="w-screen flex flex-col items-center"
+    class="flex flex-col items-center"
     :class="dark ? 'bg-[#181A1B] text-white' : 'bg-white text-black'"
   >
     <h1
-      class="mb-16 text-6xl border-b"
+      class="mb-5 lg:mb-16 text-lg md:text-2xl sm:text-4xl lg:text-6xl border-b"
       :class="dark ? 'border-white' : 'border-black'"
       v-motion-pop-visible
       :delay="600"

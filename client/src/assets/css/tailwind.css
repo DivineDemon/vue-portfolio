@@ -10,6 +10,12 @@
   font-family: 'Chivo Mono', monospace;
   scroll-behavior: smooth;
 }
+
+body,
+html {
+  overflow-x: hidden;
+}
+
 /* Custom Scrollbar Design */
 ::-webkit-scrollbar {
   display: none;
