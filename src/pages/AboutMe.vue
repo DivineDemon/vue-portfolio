@@ -81,7 +81,7 @@
       class="order-1 lg:order-2 2xl:w-[25%] h-[25%] lg:h-[50%] flex flex-col items-center justify-center space-y-5 my-8 lg:my-0"
     >
       <img
-        src="@/assets/img/about.jpg"
+        src="https://i.imgur.com/1CwC9iz.jpeg"
         alt="profile"
         class="object-cover rounded-xl shadow-2xl w-full h-full"
       />

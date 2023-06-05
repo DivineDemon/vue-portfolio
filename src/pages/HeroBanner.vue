@@ -8,7 +8,7 @@
     <img
       v-motion-slide-left
       :delay="600"
-      src="@/assets/img/profile.jpg"
+      src="https://i.imgur.com/2Dzb6C7.jpeg"
       alt="profile"
       class="hidden lg:flex rounded-full w-[17.5%] h-[55%] object-cover shadow-2xl"
     />

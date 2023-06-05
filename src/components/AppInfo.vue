@@ -12,7 +12,7 @@
         :class="app.id % 2 !== 0 && 'order-last'"
       >
         <img
-          :src="require(`@/assets/img/${app.img}`)"
+          :src="app.img"
           alt="binaziz"
           class="w-full rounded-lg shadow-xl my-5 lg:my-0"
         />

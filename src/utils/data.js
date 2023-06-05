@@ -56,7 +56,7 @@ export const experiences = [
 export const appInfo = [
   {
     id: 1,
-    img: "binaziz.png",
+    img: "https://i.imgur.com/HjH0CBK.png",
     name: "bin aziz builders",
     description:
       "A national construction company wanting to expand their horizon and reach needed a IT infrastructure for their business model. Work in Progress.",
@@ -66,7 +66,7 @@ export const appInfo = [
   },
   {
     id: 2,
-    img: "caresocius.png",
+    img: "https://i.imgur.com/EfB6BAR.png",
     name: "caresocius",
     description:
       "Caresocius is a software company focused on building a secure Ecosystem in the field of health travel.",
@@ -76,7 +76,7 @@ export const appInfo = [
   },
   {
     id: 3,
-    img: "pinterest-clone.png",
+    img: "https://i.imgur.com/ILExF8D.png",
     name: "lemmeSee",
     description:
       "A web app that behaves exactly like pinterest. You can share your photos, gifs, videos and embedded images on this platform. It also supports OAuth.",
@@ -86,7 +86,7 @@ export const appInfo = [
   },
   {
     id: 4,
-    img: "sedcard.png",
+    img: "https://i.imgur.com/rQnFJkw.png",
     name: "Model Platform",
     description:
       "Model Platform is a Professional Composite Card Maker for Models. It helps create professional grade Composite cards easily and allows the user to download it as a PDF too.",
@@ -96,7 +96,7 @@ export const appInfo = [
   },
   {
     id: 5,
-    img: "sneakers123.png",
+    img: "https://i.imgur.com/eZfHIEd.png",
     name: "Sneakers123",
     description:
       "Sneakers123 is a search engine for Sneaker collectors, enthusiasts and hypebeasts that need to find sneakers but want the process to be a bit easier.",
