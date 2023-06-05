@@ -4,7 +4,7 @@
     :class="{ 'bg-[#181A1B] text-white': dark }"
   >
     <h1
-      class="text-3xl border-b"
+      class="text-xl md:text-3xl border-b"
       :class="dark ? 'border-white' : 'border-black'"
     >
       Other Noteworthy Projects
