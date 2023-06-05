@@ -5,7 +5,7 @@
     :class="dark ? 'bg-[#181A1B] text-white' : 'bg-white text-black'"
   >
     <h1
-      class="text-6xl border-b"
+      class="text-3xl md:text-6xl border-b"
       :class="dark ? 'border-white' : 'border-black'"
       v-motion-pop-visible
       :delay="600"
@@ -13,7 +13,7 @@
       Get in Touch
     </h1>
     <p
-      class="text-gray-400 w-[35%] text-center"
+      class="text-gray-400 w-[75%] lg:w-[35%] text-center"
       v-motion-pop-visible
       :delay="600"
     >
@@ -26,7 +26,7 @@
       v-motion-slide-visible-top
       :delay="600"
       @submit.prevent="sendEmail"
-      class="flex flex-col items-center justify-center w-[35%]"
+      class="flex flex-col items-center justify-center w-[75%] lg:w-[35%]"
     >
       <div class="w-full flex flex-col space-y-3">
         <label for="name" class="w-full text-left">Name:</label>
