@@ -1,7 +1,5 @@
 <template>
   <div
-    v-motion-pop-visible
-    :delay="600"
     class="w-full h-full rounded-lg shadow-xl flex flex-col items-start justify-start p-5"
     :class="dark ? 'bg-black text-white' : 'bg-gray-300 text-black'"
   >
@@ -63,4 +61,7 @@ watch(
 onMounted(() => {
   dark.value = JSON.parse(localStorage.getItem("vuex")).darkMode;
 });
+
+// v-motion-pop-visible
+// :delay="600"
 </script>

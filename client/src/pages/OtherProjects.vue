@@ -1,13 +1,11 @@
 <template>
   <div
-    class="w-screen h-screen flex flex-col items-center justify-center space-y-5"
+    class="w-screen flex flex-col items-center justify-center space-y-5"
     :class="{ 'bg-[#181A1B] text-white': dark }"
   >
     <h1
       class="text-3xl border-b"
       :class="dark ? 'border-white' : 'border-black'"
-      v-motion-pop-visible
-      :delay="600"
     >
       Other Noteworthy Projects
     </h1>
@@ -19,7 +17,9 @@
     >
       ( view the archive )
     </a>
-    <div class="w-[50%] grid grid-cols-3 gap-3">
+    <div
+      class="w-[70%] xl:w-[50%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"
+    >
       <AppCard v-for="repo in repoInfo" :key="repo.id" :repo="repo" />
     </div>
   </div>
@@ -52,4 +52,7 @@ watch(
 onMounted(() => {
   dark.value = JSON.parse(localStorage.getItem("vuex")).darkMode;
 });
+
+// v-motion-pop-visible
+// :delay="600"
 </script>
