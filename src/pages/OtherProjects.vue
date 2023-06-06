@@ -18,6 +18,8 @@
       ( view the archive )
     </a>
     <div
+      v-motion-pop-visible
+      :delay="600"
       class="w-[70%] xl:w-[50%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"
     >
       <AppCard v-for="repo in repoInfo" :key="repo.id" :repo="repo" />
@@ -29,11 +31,11 @@
 import { useStore } from "vuex";
 import { ref, watch, onMounted } from "vue";
 
-import { repoInfo } from "@/utils/data";
 import AppCard from "@/components/AppCard.vue";
 
 // Initialize Store
 const store = useStore();
+const repoInfo = store.getters.getRepoInfo;
 
 // Data
 const dark = ref(false);
@@ -52,7 +54,4 @@ watch(
 onMounted(() => {
   dark.value = JSON.parse(localStorage.getItem("vuex")).darkMode;
 });
-
-// v-motion-pop-visible
-// :delay="600"
 </script>

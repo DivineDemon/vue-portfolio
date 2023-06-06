@@ -20,9 +20,9 @@
     >
       <div class="hidden xl:flex col-span-2" id="splitter" />
       <li
-        v-for="experience in experiences"
+        v-for="(experience, index) in experiences"
         class="my-3 mx-12 sm:mx-3 col-span-12 sm:col-span-6 xl:col-span-2 px-5 py-3 rounded-lg cursor-pointer"
-        @click="activeTab(experience.id)"
+        @click="activeTab(index)"
         :key="experience.id"
         :class="
           dark
@@ -30,7 +30,7 @@
             : 'bg-white text-black border border-black'
         "
       >
-        <span :class="selected === experience.id && 'underline font-bold'">
+        <span :class="selected === index && 'underline font-bold'">
           {{ experience.name }}
         </span>
       </li>
@@ -49,7 +49,6 @@
 import { useStore } from "vuex";
 import { ref, watch, onMounted } from "vue";
 
-import { experiences } from "@/utils/data";
 import JobInformation from "@/components/JobInformation.vue";
 
 // Initialize Store
@@ -58,6 +57,7 @@ const store = useStore();
 // Data
 const dark = ref(false);
 const selected = ref(0);
+const experiences = store.getters.getExperience;
 
 // Methods
 const activeTab = (value) => {

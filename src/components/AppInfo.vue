@@ -2,18 +2,18 @@
   <div class="w-[70%] flex flex-col items-center justify-center relative">
     <div
       class="py-20 flex flex-col lg:flex-row items-center justify-center w-full"
-      v-for="app in appInfo"
+      v-for="(app, index) in appInfo"
       :key="app.id"
     >
       <div
         v-motion-slide-visible-left
         :delay="600"
         class="w-[80%] lg:w-[50%]"
-        :class="app.id % 2 !== 0 && 'order-last'"
+        :class="index % 2 !== 0 && 'order-last'"
       >
         <img
-          :src="app.img"
-          alt="binaziz"
+          :src="app.image"
+          :alt="app.name"
           class="w-full rounded-lg shadow-xl my-5 lg:my-0"
         />
       </div>
@@ -21,7 +21,7 @@
         v-motion-slide-visible-right
         class="w-[80%] lg:w-[50%] flex flex-col space-y-5"
         :class="
-          app.id % 2 !== 0
+          index % 2 !== 0
             ? 'items-center justify-center lg:items-start lg:justify-start'
             : 'items-center justify-center lg:items-end lg:justify-end'
         "
@@ -38,7 +38,7 @@
         >
           <p
             class="w-full text-xs md:text-normal lg:text-lg"
-            :class="app.id % 2 !== 0 ? 'text-left' : 'text-right'"
+            :class="index % 2 !== 0 ? 'text-left' : 'text-right'"
           >
             {{ app.description }}
           </p>
@@ -46,7 +46,7 @@
         <ul
           class="w-full text-xs flex flex-row space-x-5"
           :class="
-            app.id % 2 !== 0
+            index % 2 !== 0
               ? 'items-center justify-center lg:items-start lg:justify-start'
               : 'items-center justify-center lg:items-end lg:justify-end'
           "
@@ -56,7 +56,7 @@
         <ul
           class="w-full text-xs flex flex-row space-x-10"
           :class="
-            app.id % 2 !== 0
+            index % 2 !== 0
               ? 'items-center justify-center lg:items-start lg:justify-start'
               : 'items-center justify-center lg:items-end lg:justify-end'
           "
@@ -80,13 +80,13 @@
 <script setup>
 import { useStore } from "vuex";
 import { ref, watch, onMounted } from "vue";
-import { appInfo } from "@/utils/data";
 
 // Initialize Store
 const store = useStore();
 
 // Data
 const dark = ref(false);
+const appInfo = store.getters.getAppInfo;
 
 // Watchers
 watch(

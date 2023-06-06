@@ -11,7 +11,10 @@
   <HoverEmail />
 </template>
 
-<script>
+<script setup>
+import { onMounted } from "vue";
+import { useStore } from "vuex";
+
 // Pages
 import AboutMe from "./pages/AboutMe.vue";
 import HeroBanner from "./pages/HeroBanner.vue";
@@ -26,19 +29,13 @@ import FooterBar from "./components/FooterBar.vue";
 import HoverEmail from "./components/HoverEmail.vue";
 import SocialButtons from "./components/SocialButtons.vue";
 
-export default {
-  name: "App",
-  components: {
-    NavBar,
-    HeroBanner,
-    AboutMe,
-    WorkExperience,
-    SocialButtons,
-    HoverEmail,
-    WebProjects,
-    OtherProjects,
-    ContactCard,
-    FooterBar,
-  },
-};
+// Initialize Store
+const store = useStore();
+
+// Mounted
+onMounted(() => {
+  store.dispatch("fetchExperience");
+  store.dispatch("fetchAppInfo");
+  store.dispatch("fetchRepoInfo");
+});
 </script>
