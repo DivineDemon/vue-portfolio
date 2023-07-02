@@ -4,7 +4,6 @@
       class="text-xl font-semibold flex flex-row items-center justify-center space-x-5"
       :class="dark ? 'text-white' : 'text-black'"
     >
-      <!-- <span>{{ experience.job }} @ {{ experience.name }}</span> -->
       <div
         class="flex flex-col md:flex-row items-center justify-center space-x-5"
       >
