@@ -16,7 +16,7 @@
       </span>
     </span>
     <span class="mt-2 mb-5 text-sm text-gray-400">
-      {{ experience.from }} &middot;
+      {{ new Date(experience.from).toDateString() }} &middot;
       {{ experience.to }}
     </span>
     <ul class="sm:list-disc w-[70%] text-xs md:text-normal lg:text-lg">
