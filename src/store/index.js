@@ -39,22 +39,18 @@ export default createStore({
   actions: {
     async fetchExperience({ commit }) {
       const response = await fetch(
-        `${process.env.VUE_APP_BASE_URL}/api/experience`
+        `${process.env.VUE_APP_BASE_URL}/experience`
       );
       const data = await response.json();
       commit("setExperience", data.response);
     },
     async fetchAppInfo({ commit }) {
-      const response = await fetch(
-        `${process.env.VUE_APP_BASE_URL}/api/app-info`
-      );
+      const response = await fetch(`${process.env.VUE_APP_BASE_URL}/app-info`);
       const data = await response.json();
       commit("setAppInfo", data.response);
     },
     async fetchRepoInfo({ commit }) {
-      const response = await fetch(
-        `${process.env.VUE_APP_BASE_URL}/api/repo-info`
-      );
+      const response = await fetch(`${process.env.VUE_APP_BASE_URL}/repo-info`);
       const data = await response.json();
       commit("setRepoInfo", data.response);
     },
