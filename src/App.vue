@@ -34,8 +34,8 @@ const store = useStore();
 
 // Mounted
 onMounted(() => {
-  store.dispatch("fetchExperience");
   store.dispatch("fetchAppInfo");
   store.dispatch("fetchRepoInfo");
+  store.dispatch("fetchExperience");
 });
 </script>

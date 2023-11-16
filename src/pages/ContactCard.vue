@@ -22,7 +22,6 @@
       get back to you!
     </p>
     <form
-      ref="form"
       v-motion-slide-visible-top
       :delay="600"
       @submit.prevent="sendEmail"
@@ -34,6 +33,7 @@
           type="text"
           id="name"
           name="user_name"
+          v-model="name"
           placeholder="Your Name Here"
           autocomplete="username"
           class="text-black w-full px-5 py-3 rounded-lg shadow-lg focus:border-0 focus:-outline-0 focus:ring-0 focus-visible:border-0 focus-visible:outline-0 focus-visible:ring-0"
@@ -48,6 +48,7 @@
           name="user_email"
           placeholder="Your Email Here"
           autocomplete="email"
+          v-model="email"
           class="text-black w-full px-5 py-3 rounded-lg shadow-lg focus:border-0 focus:-outline-0 focus:ring-0 focus-visible:border-0 focus-visible:outline-0 focus-visible:ring-0"
           :class="dark ? 'bg-white' : 'bg-gray-200'"
         />
@@ -59,17 +60,29 @@
           id="message"
           cols="46"
           rows="3"
+          v-model="message"
           class="text-black w-full px-5 py-3 rounded-lg shadow-lg focus:border-0 focus:-outline-0 focus:ring-0 focus-visible:border-0 focus-visible:outline-0 focus-visible:ring-0"
           :class="dark ? 'bg-white' : 'bg-gray-200'"
         />
       </div>
       <button
         type="submit"
-        class="shadow-lg mt-5 rounded-lg px-5 py-3 font-medium flex flex-row items-center justify-center space-x-5"
+        class="shadow-lg mt-5 rounded-lg"
         :class="dark ? 'bg-white text-black' : 'bg-black text-white'"
       >
-        <span>Submit</span>
-        <font-awesome-icon icon="fa-solid fa-plane" />
+        <div
+          class="w-full px-5 py-3 font-medium flex flex-row items-center justify-center space-x-5"
+          v-if="!loading"
+        >
+          <span>Submit</span>
+          <font-awesome-icon icon="fa-solid fa-plane" />
+        </div>
+        <div
+          v-else
+          class="w-full px-5 py-3 font-medium flex flex-row items-center justify-center space-x-5"
+        >
+          <font-awesome-icon icon="fa-solid fa-spinner" class="animate-spin" />
+        </div>
       </button>
     </form>
   </div>
@@ -79,31 +92,49 @@
 import { useStore } from "vuex";
 import emailjs from "@emailjs/browser";
 import { ref, watch, onMounted } from "vue";
+import { useToast } from "vue-toast-notification";
+import "vue-toast-notification/dist/theme-sugar.css";
 
 // Initialize Store
 const store = useStore();
+const toast = useToast();
 
 // Data
+const name = ref(null);
+const email = ref(null);
 const dark = ref(false);
-const form = ref(null);
+const message = ref(null);
+const loading = ref(false);
 
 // Methods
 const sendEmail = () => {
+  loading.value = true;
+
+  const templateParams = {
+    user_name: name.value,
+    message: message.value,
+    user_email: email.value,
+  };
+
   emailjs
-    .sendForm(
+    .send(
       process.env.VUE_APP_SERVICE_ID,
       process.env.VUE_APP_TEMPLATE_ID,
-      form.value,
+      templateParams,
       process.env.VUE_APP_PUBLIC_KEY
     )
     .then(
-      (result) => {
-        console.log("Success", result.text);
+      () => {
+        toast.success("Sent! I'll Reach back to you ASAP!");
+        loading.value = false;
       },
-      (err) => {
-        console.log("Failure", err.text);
+      () => {
+        toast.error("Please Try Again!");
+        loading.value = false;
       }
     );
+
+  toast.clear();
 };
 
 // Watchers
